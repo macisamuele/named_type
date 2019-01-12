@@ -1,6 +1,4 @@
 extern crate named_type;
-#[macro_use]
-extern crate named_type_derive;
 
 use named_type::NamedType;
 
@@ -52,7 +50,7 @@ fn test_suffix() {
 
 #[test]
 fn test_ensure_that_structs_could_be_made_into_objects() {
-    let list_of_boxed_NamedType: Vec<Box<NamedType>> = vec![
+    let list_of_boxed_named_type: Vec<Box<NamedType>> = vec![
         Box::new(MyStruct {}),
         Box::new(MyEnum::V1),
         Box::new(Prefixed::V1),
